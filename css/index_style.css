@@ -1,0 +1,104 @@
+
+body {
+    margin:3px;
+    padding:0;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(49, 58, 58);
+    color: rgb(250, 250, 250);
+
+}
+.container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns:  1fr;
+    grid-template-rows:  15% 1fr 5% ;
+    grid-template-areas:
+    "nav"
+    "main"
+    "footer";
+}
+.nav{
+
+    display: grid;
+
+    grid-area: nav;
+    grid-template-columns: 7% 1fr 20%;
+    grid-template-rows: 1fr;
+    grid-gap:0.3rem;
+}
+.nav > *{
+    /*/*box-shadow: 2px 5px 10px rgba(41, 41, 41, 0.712);
+    border-style:solid;
+    border-radius: 10px; 
+    border-color: rgba(41, 41, 41, 0.712);
+    background-color: rgb(60, 65, 65);
+    max-block-size: 40%;
+    text-align: center;*/
+}
+.main{
+    display: grid;
+    grid-area: main;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap:0.4rem;
+    max-block-size: 100%;
+    overflow: hidden;
+}
+.main img{
+    grid-column-start: 0;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    z-index: 0;
+    opacity: 20%;
+    object-fit:fill;
+    width: 100%;
+}
+.texto_inicial{
+    z-index: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-image: url(../img/lua.png);
+    background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+    
+}
+.texto_inicial p{ 
+    background-image: url(../img/inor.png);
+    background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+.main > *{
+    /*box-shadow: 2px 5px 10px rgba(41, 41, 41, 0.712);
+    border-style:solid;
+    border-radius: 10px; 
+    border-color: rgba(41, 41, 41, 0.712);
+    background-color: rgb(60, 65, 65);
+    max-block-size: 40%;
+    text-align: center;
+    min-height: 100%; */
+}
+.footer{
+    display: grid;
+    grid-area: footer;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+}
+.footer > *{
+    /*box-shadow: 2px 5px 10px rgba(41, 41, 41, 0.712);
+    border-style:solid;
+    border-radius: 10px; 
+    border-color: rgba(41, 41, 41, 0.712);
+    background-color: rgb(60, 65, 65);
+    text-align: center;*/
+}
